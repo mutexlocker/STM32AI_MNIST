@@ -221,9 +221,7 @@ int main(void)
   /* USER CODE BEGIN 2 */
   Touch_init();
   /* initialize input/output buffer handlers */
-  const ai_u16 batch_size = 1;
   ai_float in_data[28][28]= {{0}};
-  ai_float in_data_cov[28][28][1] = {{0}};
   id_prob first_guess;
   id_prob second_guess;
   first_guess.prob = 0.0;
@@ -231,7 +229,6 @@ int main(void)
   char first_guess_str[12];
   char second_guess_str[12];
   ai_float out_data[NUM_CLASSES];
-  uint32_t time;
   /* USER CODE END 2 */
 
   /* Infinite loop */
