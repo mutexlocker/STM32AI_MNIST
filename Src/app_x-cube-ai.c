@@ -59,21 +59,24 @@
 /*************************************************************************
   *
   */
-     static ai_handle network = AI_HANDLE_NULL;
-     static ai_buffer ai_input[AI_NETWORK_IN_NUM] = { AI_NETWORK_IN_1 };
-     static ai_buffer ai_output[AI_NETWORK_OUT_NUM] = { AI_NETWORK_OUT_1 };
-     AI_ALIGNED(4)
-     static ai_u8 activations[AI_NETWORK_DATA_ACTIVATIONS_SIZE];
+//     static ai_handle network = AI_HANDLE_NULL;
+//     static ai_buffer ai_input[AI_NETWORK_IN_NUM] = { AI_NETWORK_IN_1 };
+//     static ai_buffer ai_output[AI_NETWORK_OUT_NUM] = { AI_NETWORK_OUT_1 };
+//     AI_ALIGNED(4)
+//     static ai_u8 activations[AI_NETWORK_DATA_ACTIVATIONS_SIZE];
 
 void MX_X_CUBE_AI_Init(void)
 {
     MX_UARTx_Init();
     /* USER CODE BEGIN 0 */
-//    static ai_handle network = AI_HANDLE_NULL;
-//    static ai_buffer ai_input[AI_NETWORK_IN_NUM] = { AI_NETWORK_IN_1 };
-//    static ai_buffer ai_output[AI_NETWORK_OUT_NUM] = { AI_NETWORK_OUT_1 };
-//    AI_ALIGNED(4)
-//    static ai_u8 activations[AI_NETWORK_DATA_ACTIVATIONS_SIZE];
+	#include <string.h>
+	#include <stdio.h>
+    static ai_handle network = AI_HANDLE_NULL;
+    static ai_buffer ai_input[AI_NETWORK_IN_NUM] = { AI_NETWORK_IN_1 };
+    static ai_buffer ai_output[AI_NETWORK_OUT_NUM] = { AI_NETWORK_OUT_1 };
+    AI_ALIGNED(4)
+    static ai_u8 activations[AI_NETWORK_DATA_ACTIVATIONS_SIZE];
+
 
     ai_error err;
     err = ai_network_create(&network, AI_NETWORK_DATA_CONFIG);
